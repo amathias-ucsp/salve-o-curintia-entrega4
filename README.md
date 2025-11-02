@@ -1,4 +1,4 @@
-# Salve o Curintia — Entrega 4 (Fix • Client-side SPA)
+# Salve o Curintia — Entrega 4 (Client-side SPA)
 
 Versão **legível e funcional** da SPA 100% client-side.
 - Router por *hash* (`#/`, `#/projetos`, `#/cadastro`)
