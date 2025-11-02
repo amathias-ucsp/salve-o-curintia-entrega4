@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Salve o Curintia — SPA (Entrega 4 fix)</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#app">Pular para o conteúdo</a>
+
+  <header>
+    <div class="container navbar">
+      <a class="brand" href="#/">
+        <img src="assets/img/logo-salve-o-curintia.png" alt="Logo Salve o Curintia">
+        <span>Salve o Curintia</span>
+      </a>
+
+      <div class="controls">
+        <label class="sr-only" for="theme-select">Tema</label>
+        <select id="theme-select" aria-label="Selecionar tema">
+          <option value="light">Claro</option>
+          <option value="dark">Escuro</option>
+          <option value="contrast">Alto contraste</option>
+        </select>
+
+        <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+      </div>
+
+      <ul id="primary-nav" class="nav-links" role="menubar">
+        <li class="nav-item"><a href="#/" data-route>Início</a></li>
+        <li class="nav-item">
+          <a href="#/projetos" data-route aria-haspopup="true" aria-expanded="false">Projetos</a>
+          <div class="submenu" role="menu">
+            <a href="#/projetos" data-route>Campanha Natal Sem Jogador</a>
+          </div>
+        </li>
+        <li class="nav-item"><a href="#/cadastro" data-route>Cadastro</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="app" aria-live="polite"></main>
+
+  <footer>
+    <div class="container">
+      <p>© 2025 Salve o Curintia — Projeto acadêmico (Entrega 4 fix)</p>
+    </div>
+  </footer>
+
+  <div class="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

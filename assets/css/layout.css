@@ -1,0 +1,54 @@
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  background:var(--bg); color:var(--fg); line-height:1.6;
+}
+
+a{color:var(--link)}
+img{max-width:100%;height:auto;display:block}
+
+.container{max-width:var(--container);margin:0 auto;padding:0 var(--sp2)}
+
+/* Header / Footer */
+header,footer{background:var(--bg);border-bottom:2px solid var(--card-b)}
+header .container,footer .container{padding:var(--sp2) 0}
+footer p{margin:0;text-align:center;color:var(--muted)}
+
+.navbar{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:800;color:var(--fg)}
+.brand img {  width: 48px;  height: 48px;  border-radius: 50%;  object-fit: cover; }
+
+.controls{display:flex;gap:10px;align-items:center}
+.nav-toggle{display:none;background:transparent;color:var(--fg);border:2px solid var(--card-b);border-radius:10px;padding:8px 12px}
+
+#primary-nav{list-style:none;display:flex;gap:18px;margin:0;padding:0}
+.nav-links a{color:var(--fg);text-decoration:none;padding:8px 10px;border-radius:10px}
+#primary-nav a:hover,#primary-nav a:focus{background:var(--card)}
+
+.submenu{display:none;position:absolute;background:var(--card);border:2px solid var(--card-b);border-radius:12px;min-width:220px;padding:8px;z-index:20}
+.nav-item{position:relative}
+.nav-item:focus-within .submenu,.nav-item:hover .submenu{display:block}
+
+/* Mobile nav */
+@media (max-width:768px){
+  .nav-toggle{display:block}
+  #primary-nav{
+    display:none;position:absolute;right:12px;top:72px;background:var(--card);
+    border:2px solid var(--card-b);border-radius:12px;padding:12px;flex-direction:column;width:min(85vw,320px)
+  }
+  #primary-nav.active{display:flex}
+}
+
+/* Hero */
+.hero{position:relative}
+.hero img{width:100%}
+.hero .overlay{position:absolute;inset:0;display:grid;place-items:center;text-align:center;color:#fff;padding:var(--sp4)}
+.hero h1{font-size:clamp(1.6rem,3.2vw,3rem);margin:0 0 var(--sp2)}
+.hero p{margin:0 0 var(--sp3)}
+
+/* Grid */
+.grid-12{display:grid;gap:var(--sp3);grid-template-columns:repeat(12,1fr)}
+.col-12{grid-column:span 12}.col-6{grid-column:span 6}.col-4{grid-column:span 4}
+@media (max-width:1024px){.lg-col-12{grid-column:span 12}}
+@media (max-width:768px){.md-col-12{grid-column:span 12}}

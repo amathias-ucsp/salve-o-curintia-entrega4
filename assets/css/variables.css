@@ -1,0 +1,30 @@
+:root{
+  /* Paleta base (preto/branco + roxo) */
+  --p: #8800ff;
+  --p-600:#6f00d1;
+  --p-300:#b366ff;
+  --bg:#ffffff;
+  --fg:#000000;
+  --muted:#333333;
+  --card:#f7f7f7;
+  --card-b:#e5e5e5;
+  --link:#4b00cc;
+  --focus:#6a0dad;
+
+  /* Tipografia e espaçamento */
+  --fs-xs:.75rem;--fs-sm:.875rem;--fs-md:1rem;--fs-lg:1.5rem;--fs-xl:2rem;
+  --sp1:8px;--sp2:16px;--sp3:24px;--sp4:32px;--sp5:48px;--sp6:64px;
+  --radius:14px;--container:1160px;
+}
+
+/* Tema escuro */
+:root[data-theme="dark"]{
+  --bg:#0c0c0c;--fg:#f2f2f2;--muted:#cfcfcf;
+  --card:#121212;--card-b:#262626;--link:#b366ff;--focus:#8800ff;
+}
+
+/* Alto contraste */
+:root[data-theme="contrast"]{
+  --bg:#000;--fg:#fff;--muted:#e6e6e6;
+  --card:#0b0b0b;--card-b:#262626;--link:#ffffff;--focus:#ffffff;
+}
